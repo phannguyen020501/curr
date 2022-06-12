@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawerLayout"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/activity_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="?android:actionBarSize"
+            android:orientation="vertical"
+            android:padding="16dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="233dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/firstCurrencySpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    tools:ignore="NestedWeights" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <EditText
+                        android:id="@+id/firstValue"
+                        android:layout_width="match_parent"
+                        android:text="@string/display"
+                        style="@style/ValueTextView"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:autoSizeMaxTextSize="72sp"
+                    android:autoSizeTextType="uniform"
+                    android:text="@string/VND"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    tools:ignore="NestedWeights" />
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <EditText
+                        android:id="@+id/vndValue"
+                        android:layout_width="match_parent"
+                        style="@style/ValueTextView" />
+
+                    <TextView
+                        style="@style/NameTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/VND" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:layout_gravity="center_horizontal"
+                android:alignmentMode="alignMargins"
+                android:columnCount="3"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/CalcButton"
+                    android:onClick="clearBTN"
+                    android:text="@string/operationClear" />
+
+                <ImageButton
+                    android:layout_width="3dp"
+                    android:layout_height="0dp"
+                    android:layout_rowWeight="1"
+                    android:layout_columnWeight="1"
+                    android:layout_gravity="fill"
+                    android:onClick="bsBTN"
+                    android:src="@drawable/ic_backspace"
+                    tools:ignore="ContentDescription" />
+
+                <Button
+                    android:id="@+id/button"
+                    style="@style/CalcButton"
+                    android:text=""
+                    />
+
+                <Button
+                    style="@style/CalcButton"
+                    android:text="@string/digit7"
+                    android:onClick="sevenBTN"/>
+
+                <Button
+                    style="@style/CalcButton"
+                    android:text="@string/digit8"
+                    android:onClick="eightBTN"/>
+                <Button
+                    style="@style/CalcButton"
+                    android:text="@string/digit9"
+                    android:onClick="nineBTN"/>
+
+                <Button
+                    style="@style/CalcButton"
+                    android:text="@string/digit4"
+                    android:onClick="fourBTN"/>
+                <Button
+                    style="@style/CalcButton"
+                    android:text="@string/digit5"
+                    android:onClick="fiveBTN"/>
+                <Button
+                    style="@style/CalcButton"
+                    android:text="@string/digit6"
+                    android:onClick="sixBTN"/>
+
+                <Button
+                    style="@style/CalcButton"
+                    android:text="@string/digit1"
+                    android:onClick="oneBTN"/>
+
+                <Button
+                    style="@style/CalcButton"
+                    android:text="@string/digit2"
+                    android:onClick="twoBTN"/>
+                <Button
+                    style="@style/CalcButton"
+                    android:text="@string/digit3"
+                    android:onClick="threeBTN"/>
+
+                <Button
+                    style="@style/CalcButton"
+                    android:text="@string/digit0"
+                    android:layout_column="1"
+                    android:onClick="zeroBTN"/>
+
+                <Button
+                    style = "@style/CalcButton"
+                    android:text="@string/equal"
+                    android:onClick="equal"/>
+
+            </GridLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
